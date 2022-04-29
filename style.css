@@ -1,0 +1,249 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.tod .button-tod {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 10px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  transition: box-shadow .2s, -webkit-transform .1s, transform .1s;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  width: auto;
+}
+
+.tod .button-tod:focus-visible {
+  -webkit-box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+          box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.tod .button-tod:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.tod .button-tod:disabled {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.tod .button-tod-2 {
+  border-radius: 50%;
+  padding: 10px;
+  border: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.tod .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tod .fl-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tod .flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tod header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+.tod header h1 {
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
+.tod main {
+  background-color: #DDDDDD;
+  height: calc(100vh - 120px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #a0302c;
+  background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0, 0, 0, 0.4) 50px, rgba(0, 0, 0, 0.4) 53px, transparent 53px, transparent 63px, rgba(0, 0, 0, 0.4) 63px, rgba(0, 0, 0, 0.4) 66px, transparent 66px, transparent 116px, rgba(0, 0, 0, 0.5) 116px, rgba(0, 0, 0, 0.5) 166px, rgba(255, 255, 255, 0.2) 166px, rgba(255, 255, 255, 0.2) 169px, rgba(0, 0, 0, 0.5) 169px, rgba(0, 0, 0, 0.5) 179px, rgba(255, 255, 255, 0.2) 179px, rgba(255, 255, 255, 0.2) 182px, rgba(0, 0, 0, 0.5) 182px, rgba(0, 0, 0, 0.5) 232px, transparent 232px), repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0, 0, 0, 0.4) 50px, rgba(0, 0, 0, 0.4) 53px, transparent 53px, transparent 63px, rgba(0, 0, 0, 0.4) 63px, rgba(0, 0, 0, 0.4) 66px, transparent 66px, transparent 116px, rgba(0, 0, 0, 0.5) 116px, rgba(0, 0, 0, 0.5) 166px, rgba(255, 255, 255, 0.2) 166px, rgba(255, 255, 255, 0.2) 169px, rgba(0, 0, 0, 0.5) 169px, rgba(0, 0, 0, 0.5) 179px, rgba(255, 255, 255, 0.2) 179px, rgba(255, 255, 255, 0.2) 182px, rgba(0, 0, 0, 0.5) 182px, rgba(0, 0, 0, 0.5) 232px, transparent 232px), repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0, 0, 0, 0.2) 2px, rgba(0, 0, 0, 0.2) 3px, transparent 3px, transparent 5px, rgba(0, 0, 0, 0.2) 5px);
+}
+
+.tod main #data-spin-action {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  padding: 12px;
+  color: #594300;
+  max-width: 70vw;
+  background: #ffc718;
+  border-radius: 12px;
+  line-height: 1.1em;
+}
+
+.tod main section .play-area ul.players {
+  position: relative;
+  padding: 0;
+  margin: 1em auto;
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+}
+
+.tod main section .play-area ul.players li.player-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+.tod main section .play-area ul.players li.player-container .player {
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.tod main section .play-area ul.players li.player-container .player img {
+  padding-bottom: 5px;
+}
+
+.tod main section .bottle {
+  position: relative;
+  background-color: #958686;
+  border: 1vmin solid #381918;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #dca 12%, transparent 0, transparent 88%, #dca 0), linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0), linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0) #753;
+  background-size: 25px 25px;
+  width: 260px;
+  height: 260px;
+}
+
+.tod main section .bottle img.spinner-bottle {
+  width: 80%;
+  height: 80%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-timing-function: cubic-bezier(0.3, 0, 0, 1);
+          transition-timing-function: cubic-bezier(0.3, 0, 0, 1);
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
+}
+
+li.player-container:first-child .player {
+  background: green;
+}
+
+li.player-container:nth-child(2) .player {
+  background: tomato;
+}
+
+li.player-container:nth-child(3) .player {
+  background: aqua;
+}
+
+li.player-container:nth-child(4) .player {
+  background: yellow;
+}
+
+li.player-container:nth-child(5) .player {
+  background: orange;
+}
+
+li.player-container:nth-child(6) .player {
+  background: purple;
+}
+
+li.player-container:nth-child(7) .player {
+  background: cyan;
+}
+
+li.player-container:nth-child(8) .player {
+  background: brown;
+}
+
+li.player-container:nth-child(9) .player {
+  background: gray;
+}
+
+li.player-container:nth-child(10) .player {
+  background: pink;
+}
+
+li.player-container:nth-child(11) .player {
+  background: maroon;
+}
+
+li.player-container:nth-child(12) .player {
+  background: gold;
+}
+/*# sourceMappingURL=style.css.map */

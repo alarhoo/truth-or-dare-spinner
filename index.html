@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Truth | Dare</title>
+  </head>
+  <body>
+    <div class="tod">
+      <header>
+        <h1>Truth | Dare</h1>
+        <nav>
+          <input type="number" name="numOfPlayers" id="numOfPlayers" title="Number of Players" />
+          <button type="button" title="add players" class="button-tod">Add Players</button>
+          <button type="button" title="add questions" class="button-tod">Add Questions</button>
+        </nav>
+      </header>
+      <main>
+        <section class="flex fl-col">
+          <div class="flex">
+            <button type="button" title="truth" class="button-tod-2">truth</button>
+            <div id="data-spin-action"></div>
+            <button type="button" title="dare" class="button-tod-2">dare</button>
+          </div>
+          <div class="play-area flex-center">
+            <ul class="players flex-center">
+              <li class="bottle flex-center">
+                <img id="bottle" src="./img/beer.svg" alt="bottle" class="spinner-bottle" />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
