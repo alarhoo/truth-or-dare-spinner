@@ -105,7 +105,11 @@ const doSpin = () => {
 
 const HELPER = {
   randomNumber: function () {
-    return Math.floor(Math.random() * 360 * 10 + 1);
+    return Math.floor(Math.random() * 360 * 10);
+  },
+
+  randomColor: function () {
+    return Math.floor(Math.random() * 16777215).toString(16);
   },
 
   randomAvatar: async function (seed = 'tod') {
@@ -115,7 +119,7 @@ const HELPER = {
   },
 };
 
-const numOfPlayers = 4;
+const numOfPlayers = 20;
 
 const createPlayersElement = () => {
   const circleDegree = 360;
@@ -140,6 +144,7 @@ const createPlayersElement = () => {
     let playerParentElem = document.createElement('li');
     playerParentElem.classList.add('player-container');
     playerParentElem.style.transform = `rotate(${rotateDegree}deg) skewY(${skewAngle}deg)`;
+    playerParentElem.style.backgroundColor = `#${HELPER.randomColor()}`;
     rotateDegree += sliceAngle;
     playerParentElem.appendChild(player);
 

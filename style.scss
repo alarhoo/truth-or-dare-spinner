@@ -3,6 +3,25 @@
   margin: 0;
 }
 
+body {
+  height: 100vh;
+  // overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.fl-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tod {
 
   // Generic Styles
@@ -58,20 +77,6 @@
     height: 50px;
   }
 
-  .flex {
-    display: flex;
-  }
-
-  .fl-col {
-    flex-direction: column;
-  }
-
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   header {
     display: flex;
     flex-direction: column;
@@ -87,16 +92,10 @@
   }
 
   main {
-    background-color: #DDDDDD;
     height: calc(100vh - 120px);
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: hsl(2, 57%, 40%);
-    background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0, 0, 0, .4) 50px, rgba(0, 0, 0, .4) 53px, transparent 53px, transparent 63px, rgba(0, 0, 0, .4) 63px, rgba(0, 0, 0, .4) 66px, transparent 66px, transparent 116px, rgba(0, 0, 0, .5) 116px, rgba(0, 0, 0, .5) 166px, rgba(255, 255, 255, .2) 166px, rgba(255, 255, 255, .2) 169px, rgba(0, 0, 0, .5) 169px, rgba(0, 0, 0, .5) 179px, rgba(255, 255, 255, .2) 179px, rgba(255, 255, 255, .2) 182px, rgba(0, 0, 0, .5) 182px, rgba(0, 0, 0, .5) 232px, transparent 232px),
-      repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0, 0, 0, .4) 50px, rgba(0, 0, 0, .4) 53px, transparent 53px, transparent 63px, rgba(0, 0, 0, .4) 63px, rgba(0, 0, 0, .4) 66px, transparent 66px, transparent 116px, rgba(0, 0, 0, .5) 116px, rgba(0, 0, 0, .5) 166px, rgba(255, 255, 255, .2) 166px, rgba(255, 255, 255, .2) 169px, rgba(0, 0, 0, .5) 169px, rgba(0, 0, 0, .5) 179px, rgba(255, 255, 255, .2) 179px, rgba(255, 255, 255, .2) 182px, rgba(0, 0, 0, .5) 182px, rgba(0, 0, 0, .5) 232px, transparent 232px),
-      repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0, 0, 0, .2) 2px, rgba(0, 0, 0, .2) 3px, transparent 3px, transparent 5px, rgba(0, 0, 0, .2) 5px);
 
     #data-spin-action {
       font-size: 18px;
@@ -140,7 +139,6 @@
               width: 200%;
               height: 200%;
               text-align: center;
-              // transform: skewY(60deg) rotate(15deg);
               padding-top: 20px;
 
               img {
@@ -153,15 +151,8 @@
 
       .bottle {
         position: relative;
-        background-color: #958686;
         border: 1vmin solid #381918;
         border-radius: 50%;
-
-        background: linear-gradient(45deg, #dca 12%, transparent 0, transparent 88%, #dca 0),
-          linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
-          linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0) #753;
-        background-size: 25px 25px;
-
         width: 260px;
         height: 260px;
 
@@ -177,98 +168,133 @@
   }
 }
 
-// li.player-container:first-child {
-//   transform: rotate(0deg) skewY(-60deg);
-// }
+.root {
+  height: 100vh;
+  // position: absolute;
 
-// li.player-container:nth-child(2) {
-//   transform: rotate(30deg) skewY(-60deg);
-// }
+  border: 100px solid #6d695c;
+  border-right: clamp(calc(0.1 * 100vh), calc(0.2 * 100vh), calc(0.3 * 100vw)) solid #edacac;
+  border-left: clamp(calc(0.1 * 100vh), calc(0.2 * 100vh), calc(0.3 * 100vw)) solid #edacac;
+  border-bottom: clamp(calc(0.1 * 100vh), calc(0.2 * 100vh), calc(0.3 * 100vw)) solid rosybrown;
+  border-top: clamp(calc(0.1 * 100vh), calc(0.2 * 100vh), calc(0.3 * 100vw)) solid rosybrown;
 
-// li.player-container:nth-child(3) {
-//   transform: rotate(60deg) skewY(-60deg);
-// }
+  .floor {
+    // height: clamp(calc(0.6 * 100vh), calc(0.5 * 100vh), calc(0.6 * 100vw));
+    // width: calc(0.6 * 100vw);
+    height: 100%;
+    width: 100%;
+    background-color: #269;
 
-// li.player-container:nth-child(4) {
-//   transform: rotate(90deg) skewY(-60deg);
-// }
+    .play-area {
 
-// li.player-container:nth-child(5) {
-//   transform: rotate(120deg) skewY(-60deg);
-// }
+      ul.players {
+        position: relative;
+        // border: 1px solid black;
+        padding: 0;
+        margin: 1em auto;
+        // width: 25em;
+        // height: 25em;
+        border-radius: 50%;
+        list-style: none;
+        overflow: hidden;
 
-// li.player-container:nth-child(6) {
-//   transform: rotate(150deg) skewY(-60deg);
-// }
+        li.player-container {
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 50%;
+          height: 50%;
+          transform-origin: 0% 100%;
 
-// li.player-container:nth-child(7) {
-//   transform: rotate(180deg) skewY(-60deg);
-// }
+          .player {
+            position: absolute;
+            left: -100%;
+            width: 200%;
+            height: 200%;
+            text-align: center;
+            padding-top: 20px;
 
-// li.player-container:nth-child(8) {
-//   transform: rotate(210deg) skewY(-60deg);
-// }
+            img {
+              padding-bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+    .bottle {
+      position: relative;
+      border: 1vmin solid #381918;
+      border-radius: 50%;
+      width: 260px;
+      height: 260px;
 
-// li.player-container:nth-child(9) {
-//   transform: rotate(240deg) skewY(-60deg);
-// }
+      img.spinner-bottle {
+        width: 80%;
+        height: 80%;
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(.3, 0, 0, 1);
+        transition-duration: 2.5s;
+      }
+    }
+  }
 
-// li.player-container:nth-child(10) {
-//   transform: rotate(270deg) skewY(-60deg);
-// }
-
-// li.player-container:nth-child(11) {
-//   transform: rotate(300deg) skewY(-60deg);
-// }
-
-// li.player-container:nth-child(12) {
-//   transform: rotate(330deg) skewY(-60deg);
-// }
-
-li.player-container:first-child .player {
-  background: green;
+  .door {
+    // position: relative;
+    height: 200px;
+    width: 100px;
+    color: #381918;
+  }
 }
 
-li.player-container:nth-child(2) .player {
-  background: tomato;
+// Reference for creating circle with equal parts: https://stackoverflow.com/questions/29006214/how-to-divide-a-circle-into-12-equal-parts-with-color-using-css3-javascript
+
+// CSS3 patterns - Ref: https://projects.verou.me/css3patterns/
+
+.shippo-pattern {
+  background-color: #def;
+  background-image: radial-gradient(closest-side, transparent 98%, rgba(0, 0, 0, .3) 99%),
+    radial-gradient(closest-side, transparent 98%, rgba(0, 0, 0, .3) 99%);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
 }
 
-li.player-container:nth-child(3) .player {
-  background: aqua;
+.argycle-pattern {
+  background-color: #6d695c;
+  background-image:
+    repeating-linear-gradient(120deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0, 0, 0, .1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, .1) 75%, rgba(0, 0, 0, .1)),
+    linear-gradient(120deg, rgba(0, 0, 0, .1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, .1) 75%, rgba(0, 0, 0, .1));
+  background-size: 70px 120px;
 }
 
-li.player-container:nth-child(4) .player {
-  background: yellow;
+.lined-paper-pattern {
+  background-color: #fff;
+  background-image:
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
 }
 
-li.player-container:nth-child(5) .player {
-  background: orange;
+.blue-print-pattern {
+  background-color: #269;
+  background-image: linear-gradient(white 2px, transparent 2px),
+    linear-gradient(90deg, white 2px, transparent 2px),
+    linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
 
-li.player-container:nth-child(6) .player {
-  background: purple;
+.chocolate-weave-pattern {
+  background: linear-gradient(45deg, #dca 12%, transparent 0, transparent 88%, #dca 0),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0) #753;
+  background-size: 25px 25px;
 }
 
-li.player-container:nth-child(7) .player {
-  background: cyan;
-}
-
-li.player-container:nth-child(8) .player {
-  background: brown;
-}
-
-li.player-container:nth-child(9) .player {
-  background: gray;
-}
-
-li.player-container:nth-child(10) .player {
-  background: pink;
-}
-
-li.player-container:nth-child(11) .player {
-  background: maroon;
-}
-
-li.player-container:nth-child(12) .player {
-  background: gold;
+.honey-comb-pattern {
+  background: radial-gradient(circle farthest-side at 0% 50%, #fb1 23.5%, rgba(240, 166, 17, 0) 0), 21px 30px, radial-gradient(circle farthest-side at 0% 50%, #B71 24%, rgba(240, 166, 17, 0) 0), 19px 30px, linear-gradient(#fb1 14%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 85%, #fb1 0), 0 0, linear-gradient(150deg, #fb1 24%, #B71 0, #B71 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #B71 0, #B71 76%, #fb1 0), 0 0, linear-gradient(30deg, #fb1 24%, #B71 0, #B71 26%, rgba(240, 166, 17, 0) 0, rgba(240, 166, 17, 0) 74%, #B71 0, #B71 76%, #fb1 0), 0 0, linear-gradient(90deg, #B71 2%, #fb1 0, #fb1 98%, #B71 0%), 0 0 #fb1;
+  background-size: 40px 60px;
 }
